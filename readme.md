@@ -1,7 +1,7 @@
 # GEPP
 ## Technologies
--NodeJS/Express
--Postgress
+- NodeJS/Express
+- MongoDB
 
 
 ## Author
