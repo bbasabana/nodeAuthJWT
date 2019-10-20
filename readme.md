@@ -1,4 +1,4 @@
-# GEPP
+# Node.js <Authenfication with JWT>
 ## Technologies
 - NodeJS/Express
 - MongoDB
