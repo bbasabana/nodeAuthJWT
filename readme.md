@@ -1,13 +1,14 @@
-# Node.js Authenfication with JWT
+# Node.js Authenfication with JWT 
 ## Technologies
 - NodeJS/Express
 - MongoDB
 
-### Tools to install
+### package to install
 - npm install
 - npm install express
 - npm install dotenv (config all connections)
 - npm install Mongoose (for MongoDB)
+- npm install @hapi/joi (validation)
 
 ##### Config Mongoose
 - cluster link help you connect to Database with password

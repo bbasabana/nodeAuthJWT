@@ -13,7 +13,7 @@ dotenv.config();
 mongoose.connect(process.env.DB_CONNECT,{ useNewUrlParser : true},() =>  console.log('DB connected'));
  
 //middleware
-app.use(express.json());
+app.use(bodyparser.json());
 
 //Routes Middlewares 
 app.use('/api/user', AuthRouter);
