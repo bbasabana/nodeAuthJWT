@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 const bodyparser = require('body-parser');
 
 //imports routes
@@ -13,7 +14,7 @@ dotenv.config();
 mongoose.connect(process.env.DB_CONNECT,{ useNewUrlParser : true},() =>  console.log('DB connected'));
  
 //middleware
-app.use(bodyparser.json());
+app.use(express.json());
 
 //Routes Middlewares 
 app.use('/api/user', AuthRouter);
