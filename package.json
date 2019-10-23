@@ -4,7 +4,8 @@
   "description": "Authentification Node JWT",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+    "test:coveralls" :"jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "author": "BBasabana",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "mongoose": "^5.7.5"
   },
   "devDependencies": {
+    "coveralls": "^3.0.7",
     "nodemon": "^1.19.4"
   }
 }
