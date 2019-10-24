@@ -10,9 +10,6 @@ install: npm install
 script:
   - npm test
 
-before_script :
-    - npm run lint
-
 after_script :
   - npm install coveralls && npm run coverage
 
