@@ -1,5 +1,3 @@
-[![Coverage Status](https://coveralls.io/repos/github/bbasabana/nodeAuthJWT/badge.svg?branch=master)](https://coveralls.io/github/bbasabana/nodeAuthJWT?branch=master)
-
 # Node.js Authenfication with JWT 
 ## Technologies
 - NodeJS/Express
