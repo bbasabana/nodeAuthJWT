@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.com/bbasabana/nodeAuthJWT.svg?branch=master)](https://travis-ci.com/bbasabana/nodeAuthJWT)
+
 # Node.js Authenfication with JWT 
 ## Technologies
 - NodeJS/Express
