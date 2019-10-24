@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
-    "test:coveralls" :"jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "author": "BBasabana",
   "license": "ISC",
@@ -14,10 +14,12 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "lint": "^0.7.0",
     "mongoose": "^5.7.5"
   },
   "devDependencies": {
     "coveralls": "^3.0.7",
+    "jest": "^24.9.0",
     "nodemon": "^1.19.4"
   }
 }
