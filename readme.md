@@ -1,6 +1,10 @@
 
 [![Build Status](https://travis-ci.com/bbasabana/nodeAuthJWT.svg?branch=master)](https://travis-ci.com/bbasabana/nodeAuthJWT)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/efddefae5ba66d97786e/maintainability)](https://codeclimate.com/github/bbasabana/nodeAuthJWT/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/efddefae5ba66d97786e/test_coverage)](https://codeclimate.com/github/bbasabana/nodeAuthJWT/test_coverage)
+
 # Node.js Authenfication with JWT 
 ## Technologies
 - NodeJS/Express
