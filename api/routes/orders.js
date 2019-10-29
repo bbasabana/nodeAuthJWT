@@ -22,9 +22,13 @@ router.get('/:orderId', (req, res, next) => {
 });
 
 router.delete('/:orderId', (req, res, next) => {
+    const order = {
+        productId: req.body.productId,
+        quantity : req.body.quantity
+    }
     res.status(201).json({
         message:'order delete',
-        orderId: req.params.orderId
+        orderId: order
     });
 });
 
