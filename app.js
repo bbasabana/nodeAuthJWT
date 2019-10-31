@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const connectDB = require('./db');
@@ -13,17 +12,21 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-// connect to DB
 // mongoose.connect(
-//     "mongodb+srv://BBasabana:"+
-//     process.env.MONGO_ATLAS_PWD+
-//     "cluster0-kjqor.mongodb.net/bbasabana?retryWrites=true&w=majority",
+//     process.env.DB_CONNECT,
 //     {useNewUrlParser: true}, () =>{
-//    console.log('DB connected');
+//    console.log('MongoDb connected');
 // });
 
-connectDB().then( () => {
+// mongoose.connect('mongodb://localhost/node').then(() => {
+// console.log("Connected to Database");
+// }).catch((err) => {
+//     console.log("Not Connected to Database ERROR! ", err);
+// });
+connectDB().then(() => {
     console.log('MongoDb connected');
+}).catch((err) => {
+    console.log("Not Connected to Database ERROR! ", err);
 });
 
 app.use((req, res, next) => {
