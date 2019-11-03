@@ -4,12 +4,16 @@ const mongoose = require('mongoose');
 const Product = require('../models/product');
 
 router.get('/', (req, res, next) => {
-
     Product.find()
+    .select("name price _id")
     .exec()
     .then(docs => {
+        const response = {
+            count : docs.length,
+            products : docs
+        };
         console.log(docs);
-        res.status(200).json(docs);
+        res.status(200).json(response);
     })
     .catch(err => {
         console.log(err);
@@ -41,35 +45,6 @@ router.post('/', (req, res, next) => {
         res.status(500).json({
            error:err
         });
-    });
-});
-
-router.get('/:productId', (req, res, next) => {
-    const id = req.params.productId;
-    Product.findById(id)
-    .select('name price _id')
-    .exec()
-    .then(docs => {
-        const response = {
-            count: length.docs,
-            products : docs
-
-        };
-        console.log(response);
-       // if(docs){
-            res.status(200).json(response);
-        // }else{
-        //     res.status(404).json({
-        //         message: 'dont found id',
-        //         id:docs
-        //     });
-        // }
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({
-            error : err
-        })
     });
 });
 
