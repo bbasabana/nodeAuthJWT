@@ -31,11 +31,16 @@ router.post('/', (req, res, next) => {
     product.save()
     .then(result => {
         console.log(result);
+        res.status(201).json({
+            message :'POST Products  create request',
+            CreatedProduct: product
+        });
     })
-    .catch(err => console.log(err));
-    res.status(201).json({
-        message :'POST Products  create request',
-        CreatedProduct: product
+    .catch(err => {
+        console.log(err)
+        res.status(500).json({
+           error:err
+        });
     });
 });
 
