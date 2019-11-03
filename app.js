@@ -3,7 +3,7 @@ const app = express();
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 const connectDB = require('./db');
 
 dotenv.config();
@@ -28,6 +28,8 @@ connectDB().then(() => {
 }).catch((err) => {
     console.log("Not Connected to Database ERROR! ", err);
 });
+
+mongoose.Promise = global.Promise;
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
