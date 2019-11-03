@@ -47,17 +47,23 @@ router.post('/', (req, res, next) => {
 router.get('/:productId', (req, res, next) => {
     const id = req.params.productId;
     Product.findById(id)
+    .select('name price _id')
     .exec()
-    .then(doc => {
-        console.log(doc);
-        if(doc){
-            res.status(200).json(doc);
-        }else{
-            res.status(404).json({
-                message: 'dont found id',
-                id:doc
-            });
-        }
+    .then(docs => {
+        const response = {
+            count: length.docs,
+            products : docs
+
+        };
+        console.log(response);
+       // if(docs){
+            res.status(200).json(response);
+        // }else{
+        //     res.status(404).json({
+        //         message: 'dont found id',
+        //         id:docs
+        //     });
+        // }
     })
     .catch(err => {
         console.log(err);
